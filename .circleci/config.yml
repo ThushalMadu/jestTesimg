@@ -3,12 +3,12 @@ jobs:
   build:
     working_directory: ~/jestTesimg
     docker:
-      - image: circleci/node:10.16.3
+      - image: circleci/node:18.0.0
     steps:
       - checkout
       - run:
           name: Update NPM
-          command: "sudo npm install -g npm@5"
+          command: "sudo npm install -g npm@8.6.0"
       - restore_cache:
           key: dependency-cache-{{ checksum "package-lock.json" }}
       - run:
