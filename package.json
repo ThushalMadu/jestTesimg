@@ -8,7 +8,7 @@
     "start": "react-native start",
     "detoxAndroid": "detox test --configuration android.att.debug",
     "cleanDetoxAndroid": "detox build -c android.att.debug && detox test -c android.att.debug",
-    "preTest": "jest preDefine",
+    "test": "jest ./preDefine",
     "gradleClean": "cd android && ./gradlew clean && cd .. && watchman watch-del-all",
     "npm:removeintsall": "rm -rf node_modules && npm install",
     "lint": "eslint ."
