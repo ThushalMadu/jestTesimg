@@ -3,7 +3,7 @@ jobs:
   build:
     working_directory: ~/jestTesimg
     docker:
-      - image: circleci/node:18.0.0
+      - image: circleci/node:10.16.3
     steps:
       - checkout
       - run:
