@@ -22,5 +22,8 @@ jobs:
           paths:
             - ./node_modules
       - run:
-          name: Run tests
+          name: Run Unit(Jest) tests
           command: npm run test
+      - run:
+          name: Run Automation(Detox) tests
+          command: npm run cleanDetoxEmuAndroid
