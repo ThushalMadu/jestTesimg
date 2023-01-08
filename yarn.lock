@@ -2855,10 +2855,10 @@
   "resolved" "https://registry.npmjs.org/detect-newline/-/detect-newline-3.1.0.tgz"
   "version" "3.1.0"
 
-"detox@^20.0.3":
-  "integrity" "sha512-WSyA+Oxcw6meJYFW4wpH27BCgNTniBVJTwXsQN4ox+OhoztO38yxZULH3+16hlbXNxLm9kMZFj/higA0+zum5Q=="
-  "resolved" "https://registry.npmjs.org/detox/-/detox-20.0.3.tgz"
-  "version" "20.0.3"
+"detox@^20.1.1":
+  "integrity" "sha512-0ieeWAyo2f3YKeFwm7KCz4lBkCJIydyqzCQVN1sw/ZU9x9Qc8kz+itKAEiH4DHUlLkb4YLzfEbAXfO09wvrQ3w=="
+  "resolved" "https://registry.npmjs.org/detox/-/detox-20.1.1.tgz"
+  "version" "20.1.1"
   dependencies:
     "ajv" "^8.6.3"
     "bunyan" "^1.8.12"
@@ -2873,7 +2873,6 @@
     "ini" "^1.3.4"
     "json-cycle" "^1.3.0"
     "lodash" "^4.17.5"
-    "minimist" "^1.2.0"
     "multi-sort-stream" "^1.0.3"
     "multipipe" "^4.0.0"
     "node-ipc" "^9.2.1"
