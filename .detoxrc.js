@@ -10,15 +10,15 @@ module.exports = {
     }
   },
   apps: {
-    'ios.debug': {
-      type: 'ios.app',
-      binaryPath: 'ios/build/Build/Products/Debug-iphonesimulator/jestTesimg.app',
-      build: 'xcodebuild -workspace ios/jestTesimg.xcworkspace -scheme jestTesimg -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build'
+    "ios.release": {
+      "type": "ios.app",
+      "binaryPath": "ios/build/Build/Products/Release-iphonesimulator/jestTesimg.app",
+      "build": "export RCT_NO_LAUNCH_PACKAGER=true && xcodebuild -workspace ios/jestTesimg.xcworkspace -UseNewBuildSystem=NO -scheme jestTesimg -configuration Release -sdk iphonesimulator -derivedDataPath ios/build -quiet"
     },
-    'ios.release': {
-      type: 'ios.app',
-      binaryPath: 'ios/build/Build/Products/Release-iphonesimulator/jestTesimg.app',
-      build: 'xcodebuild -workspace ios/jestTesimg.xcworkspace -scheme jestTesimg -configuration Release -sdk iphonesimulator -derivedDataPath ios/build'
+    "ios.debug": {
+      "type": "ios.app",
+      "binaryPath": "ios/build/Build/Products/Debug-iphonesimulator/jestTesimg.app",
+      "build": "xcodebuild -workspace ios/jestTesimg.xcworkspace -UseNewBuildSystem=NO -scheme jestTesimg -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build"
     },
     'android.debug': {
       type: 'android.apk',
@@ -55,19 +55,13 @@ module.exports = {
     }
   },
   configurations: {
-    'ios.sim.release': {
-      binaryPath: "ios/build/Build/Products/Release-iphonesimulator/jestTesimg.app",
-      build: "export RCT_NO_LAUNCH_PACKAGER=true && xcodebuild ONLY_ACTIVE_ARCH=YES -workspace ios/jestTesimg.xcworkspace -scheme a -configuration Release -sdk iphonesimulator -derivedDataPath ios/build",
-      device: {
-        type: "iPhone 12",
-      },
+    "ios.sim.release": {
+      "device": "simulator",
+      "app": "ios.release"
     },
-    'ios.sim.debug': {
-      binaryPath: "ios/build/Build/Products/Debug-iphonesimulator/jestTesimg.app",
-      build: "xcodebuild -workspace ios/jestTesimg.xcworkspace -scheme a -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build",
-      device: {
-        type: "iPhone 12",
-      },
+    "ios.sim.debug": {
+      "device": "simulator",
+      "app": "ios.debug"
     },
     'android.att.debug': {
       device: 'attached',
