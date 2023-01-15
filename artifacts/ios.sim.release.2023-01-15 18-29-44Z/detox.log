@@ -1,0 +1,312 @@
+23:59:44.945 detox[5246] B node_modules/.bin/detox test -c ios.sim.release --record-logs all
+  data: {
+    "id": "4f7e8668-da52-c58e-10a8-a4717c7ea330",
+    "detoxConfig": {
+      "configurationName": "ios.sim.release",
+      "apps": {
+        "default": {
+          "type": "ios.app",
+          "binaryPath": "ios/build/Build/Products/Release-iphonesimulator/jestTesimg.app",
+          "build": "xcodebuild -workspace ios/jestTesimg.xcworkspace -scheme jestTesimg -configuration Release -sdk iphonesimulator -derivedDataPath ios/build"
+        }
+      },
+      "artifacts": {
+        "rootDir": "artifacts/ios.sim.release.2023-01-15 18-29-44Z",
+        "plugins": {
+          "log": {
+            "enabled": true,
+            "keepOnlyFailedTestsArtifacts": false
+          },
+          "screenshot": {
+            "enabled": true,
+            "shouldTakeAutomaticSnapshots": false,
+            "keepOnlyFailedTestsArtifacts": false
+          },
+          "video": {
+            "enabled": false,
+            "keepOnlyFailedTestsArtifacts": false
+          },
+          "instruments": {
+            "enabled": false,
+            "keepOnlyFailedTestsArtifacts": false
+          },
+          "uiHierarchy": {
+            "enabled": false,
+            "keepOnlyFailedTestsArtifacts": false
+          }
+        }
+      },
+      "behavior": {
+        "init": {
+          "keepLockFile": false,
+          "reinstallApp": true,
+          "exposeGlobals": true
+        },
+        "cleanup": {
+          "shutdownDevice": false
+        },
+        "launchApp": "auto"
+      },
+      "cli": {
+        "recordLogs": "all",
+        "configuration": "ios.sim.release"
+      },
+      "device": {
+        "type": "ios.simulator",
+        "device": {
+          "type": "iPhone Xʀ",
+          "os": "iOS 16.1"
+        }
+      },
+      "logger": {
+        "level": "info",
+        "overrideConsole": true,
+        "options": {
+          "showLoggerName": true,
+          "showPid": true,
+          "showLevel": false,
+          "showMetadata": false,
+          "basepath": "/Users/thushalintervest/Desktop/Projects/jestTesimg/node_modules/detox/src",
+          "prefixers": {},
+          "stringifiers": {}
+        }
+      },
+      "testRunner": {
+        "retries": 0,
+        "forwardEnv": false,
+        "bail": false,
+        "jest": {
+          "setupTimeout": 120000,
+          "teardownTimeout": 30000,
+          "retryAfterCircusRetries": false,
+          "reportWorkerAssign": true
+        },
+        "args": {
+          "$0": "jest",
+          "_": [],
+          "config": "e2e/jest.config.js",
+          "--": []
+        }
+      },
+      "session": {
+        "autoStart": true,
+        "debugSynchronization": 10000
+      }
+    },
+    "detoxIPCServer": "primary-5246",
+    "testResults": [],
+    "testSessionIndex": 0,
+    "workersCount": 0
+  }
+23:59:44.947 detox[5246] i Server path not specified, so defaulting to ipc.config.socketRoot + ipc.config.appspace + ipc.config.id /tmp/detox.primary-5246
+23:59:44.948 detox[5246] i starting server on  /tmp/detox.primary-5246 
+23:59:44.948 detox[5246] i starting TLS server false
+23:59:44.948 detox[5246] i starting server as Unix || Windows Socket
+23:59:44.951 detox[5246] i Detox server listening on localhost:50456...
+23:59:44.953 detox[5246] i Serialized the session state at: /private/var/folders/3v/pn978rgs3pv4wj0t0vf_zxg00000gn/T/4f7e8668-da52-c58e-10a8-a4717c7ea330.detox.json
+23:59:44.954 detox[5246] B jest --config e2e/jest.config.js
+23:59:45.336 detox[5247] i Service path not specified, so defaulting to ipc.config.socketRoot + ipc.config.appspace + id 
+23:59:45.336 detox[5247] i requested connection to  primary-5246 /tmp/detox.primary-5246
+23:59:45.336 detox[5247] i Connecting client on Unix Socket : /tmp/detox.primary-5246
+23:59:45.337 detox[5246] i ## socket connection to server detected ##
+23:59:45.337 detox[5247] i retrying reset
+23:59:45.338 detox[5247] i dispatching event to  primary-5246 /tmp/detox.primary-5246  :  registerContext , { id: 'secondary-5247' }
+23:59:45.339 detox[5246] i received event of :  registerContext { id: 'secondary-5247' }
+23:59:45.339 detox[5246] i dispatching event to socket  :  registerContextDone { testResults: [], testSessionIndex: 0 }
+23:59:45.339 detox[5247] i ## received events ##
+23:59:45.340 detox[5247] i detected event registerContextDone { testResults: [], testSessionIndex: 0 }
+23:59:45.379 detox[5247] B e2e/newUI.test.js
+23:59:45.385 detox[5247] B set up environment
+23:59:45.386 detox[5246] i received event of :  registerWorker { workerId: 'w1' }
+23:59:45.386 detox[5246] i dispatching event to socket  :  registerWorkerDone { workersCount: 1 }
+23:59:45.386 detox[5246] i broadcasting event to all known sockets listening to  /tmp/detox.primary-5246  :   sessionStateUpdate { workersCount: 1 }
+23:59:45.386 detox[5247] i dispatching event to  primary-5246 /tmp/detox.primary-5246  :  registerWorker , { workerId: 'w1' }
+23:59:45.386 detox[5247] i ## received events ##
+23:59:45.386 detox[5247] i detected event registerWorkerDone { workersCount: 1 }
+23:59:45.464 detox[5247] i (node:5247) ExperimentalWarning: The Fetch API is an experimental feature. This feature could change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+23:59:45.466 detox[5247] i ## received events ##
+23:59:45.466 detox[5247] i detected event sessionStateUpdate { workersCount: 1 }
+23:59:45.470 detox[5246] B connection :50456<->:50457
+23:59:45.471 detox[5247] i opened web socket to: ws://localhost:50456
+23:59:45.472 detox[5247] i send message
+  data: {"type":"login","params":{"sessionId":"a610f596-f4bd-6d8e-8d56-bc06a9daa704","role":"tester"},"messageId":0}
+23:59:45.473 detox[5246] i get
+  data: {"type":"login","params":{"sessionId":"a610f596-f4bd-6d8e-8d56-bc06a9daa704","role":"tester"},"messageId":0}
+23:59:45.473 detox[5246] i created session a610f596-f4bd-6d8e-8d56-bc06a9daa704
+23:59:45.474 detox[5246] i send
+  data: {
+    "type": "loginSuccess",
+    "params": {
+      "testerConnected": true,
+      "appConnected": false
+    },
+    "messageId": 0
+  }
+23:59:45.474 detox[5246] i tester joined session a610f596-f4bd-6d8e-8d56-bc06a9daa704
+23:59:45.474 detox[5247] i get message
+  data: {"type":"loginSuccess","params":{"testerConnected":true,"appConnected":false},"messageId":0}
+   
+23:59:45.580 detox[5247] B allocate
+  args: ({"type":"ios.simulator","device":{"type":"iPhone Xʀ","os":"iOS 16.1"}})
+23:59:45.581 detox[5247] i applesimutils --list --byOS "iOS 16.1" --byType "iPhone Xʀ"
+23:59:45.665 detox[5247] i [
+
+]
+
+23:59:45.665 detox[5247] E allocate
+  error: Failed to find a device by type = "iPhone Xʀ" and by OS = "iOS 16.1"
+  
+  HINT: Run 'applesimutils --list' to list your supported devices. It is advised only to specify a device type, e.g., "iPhone Xʀ" and avoid explicit search by OS version.
+23:59:45.665 detox[5247] E set up environment
+  error: Failed to find a device by type = "iPhone Xʀ" and by OS = "iOS 16.1"
+  
+  HINT: Run 'applesimutils --list' to list your supported devices. It is advised only to specify a device type, e.g., "iPhone Xʀ" and avoid explicit search by OS version.
+23:59:45.665 detox[5247] B tear down environment
+23:59:45.666 detox[5247] B onBeforeCleanup
+  args: ()
+23:59:45.667 detox[5247] i saving FileArtifact to: artifacts/ios.sim.release.2023-01-15 18-29-44Z/detox_pid_5247.json.log { append: true }
+23:59:45.667 detox[5247] i saving FileArtifact to: artifacts/ios.sim.release.2023-01-15 18-29-44Z/detox_pid_5247.log { append: true }
+23:59:45.668 detox[5247] E onBeforeCleanup
+23:59:45.669 detox[5246] i tester exited session a610f596-f4bd-6d8e-8d56-bc06a9daa704
+23:59:45.669 detox[5246] E connection :50456<->:50457
+23:59:45.669 detox[5247] E tear down environment
+23:59:45.669 detox[5247] E e2e/newUI.test.js
+23:59:45.681 detox[5246] i received event of :  reportTestResults {
+  testResults: [
+    {
+      success: false,
+      testFilePath: '/Users/thushalintervest/Desktop/Projects/jestTesimg/e2e/newUI.test.js',
+      testExecError: {
+        name: 'DetoxRuntimeError',
+        message: 'Failed to find a device by type = "iPhone Xʀ" and by OS = "iOS 16.1"\n' +
+          '\n' +
+          `HINT: Run 'applesimutils --list' to list your supported devices. It is advised only to specify a device type, e.g., "iPhone Xʀ" and avoid explicit search by OS version.`,
+        stack: 'DetoxRuntimeError: Failed to find a device by type = "iPhone Xʀ" and by OS = "iOS 16.1"\n' +
+          '\n' +
+          `HINT: Run 'applesimutils --list' to list your supported devices. It is advised only to specify a device type, e.g., "iPhone Xʀ" and avoid explicit search by OS version.\n` +
+          '    at SimulatorAllocDriver._queryDevices (/Users/thushalintervest/Desktop/Projects/jestTesimg/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:110:13)\n' +
+          '    at SimulatorAllocDriver._groupDevicesByStatus (/Users/thushalintervest/Desktop/Projects/jestTesimg/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:89:27)\n' +
+          '    at SimulatorAllocDriver._findOrCreateDevice (/Users/thushalintervest/Desktop/Projects/jestTesimg/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:76:29)\n' +
+          '    at /Users/thushalintervest/Desktop/Projects/jestTesimg/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:30:14\n' +
+          '    at safeAsync (/Users/thushalintervest/Desktop/Projects/jestTesimg/node_modules/detox/src/utils/safeAsync.js:4:13)\n' +
+          '    at /Users/thushalintervest/Desktop/Projects/jestTesimg/node_modules/detox/src/devices/DeviceRegistry.js:73:24\n' +
+          '    at ExclusiveLockfile.exclusively (/Users/thushalintervest/Desktop/Projects/jestTesimg/node_modules/detox/src/utils/ExclusiveLockfile.js:41:15)\n' +
+          '    at SimulatorAllocDriver.allocate (/Users/thushalintervest/Desktop/Projects/jestTesimg/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:29:18)'
+      },
+      isPermanentFailure: false
+    }
+  ]
+}
+23:59:45.681 detox[5247] i dispatching event to  primary-5246 /tmp/detox.primary-5246  :  reportTestResults , {
+  testResults: [
+    {
+      success: false,
+      testFilePath: '/Users/thushalintervest/Desktop/Projects/jestTesimg/e2e/newUI.test.js',
+      testExecError: {
+        name: 'DetoxRuntimeError',
+        message: 'Failed to find a device by type = "iPhone Xʀ" and by OS = "iOS 16.1"\n' +
+          '\n' +
+          `HINT: Run 'applesimutils --list' to list your supported devices. It is advised only to specify a device type, e.g., "iPhone Xʀ" and avoid explicit search by OS version.`,
+        stack: 'DetoxRuntimeError: Failed to find a device by type = "iPhone Xʀ" and by OS = "iOS 16.1"\n' +
+          '\n' +
+          `HINT: Run 'applesimutils --list' to list your supported devices. It is advised only to specify a device type, e.g., "iPhone Xʀ" and avoid explicit search by OS version.\n` +
+          '    at SimulatorAllocDriver._queryDevices (/Users/thushalintervest/Desktop/Projects/jestTesimg/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:110:13)\n' +
+          '    at SimulatorAllocDriver._groupDevicesByStatus (/Users/thushalintervest/Desktop/Projects/jestTesimg/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:89:27)\n' +
+          '    at SimulatorAllocDriver._findOrCreateDevice (/Users/thushalintervest/Desktop/Projects/jestTesimg/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:76:29)\n' +
+          '    at /Users/thushalintervest/Desktop/Projects/jestTesimg/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:30:14\n' +
+          '    at safeAsync (/Users/thushalintervest/Desktop/Projects/jestTesimg/node_modules/detox/src/utils/safeAsync.js:4:13)\n' +
+          '    at /Users/thushalintervest/Desktop/Projects/jestTesimg/node_modules/detox/src/devices/DeviceRegistry.js:73:24\n' +
+          '    at ExclusiveLockfile.exclusively (/Users/thushalintervest/Desktop/Projects/jestTesimg/node_modules/detox/src/utils/ExclusiveLockfile.js:41:15)\n' +
+          '    at SimulatorAllocDriver.allocate (/Users/thushalintervest/Desktop/Projects/jestTesimg/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:29:18)'
+      },
+      isPermanentFailure: false
+    }
+  ]
+}
+23:59:45.682 detox[5246] i dispatching event to socket  :  reportTestResultsDone {
+  testResults: [
+    {
+      success: false,
+      testFilePath: '/Users/thushalintervest/Desktop/Projects/jestTesimg/e2e/newUI.test.js',
+      testExecError: {
+        name: 'DetoxRuntimeError',
+        message: 'Failed to find a device by type = "iPhone Xʀ" and by OS = "iOS 16.1"\n' +
+          '\n' +
+          `HINT: Run 'applesimutils --list' to list your supported devices. It is advised only to specify a device type, e.g., "iPhone Xʀ" and avoid explicit search by OS version.`,
+        stack: 'DetoxRuntimeError: Failed to find a device by type = "iPhone Xʀ" and by OS = "iOS 16.1"\n' +
+          '\n' +
+          `HINT: Run 'applesimutils --list' to list your supported devices. It is advised only to specify a device type, e.g., "iPhone Xʀ" and avoid explicit search by OS version.\n` +
+          '    at SimulatorAllocDriver._queryDevices (/Users/thushalintervest/Desktop/Projects/jestTesimg/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:110:13)\n' +
+          '    at SimulatorAllocDriver._groupDevicesByStatus (/Users/thushalintervest/Desktop/Projects/jestTesimg/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:89:27)\n' +
+          '    at SimulatorAllocDriver._findOrCreateDevice (/Users/thushalintervest/Desktop/Projects/jestTesimg/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:76:29)\n' +
+          '    at /Users/thushalintervest/Desktop/Projects/jestTesimg/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:30:14\n' +
+          '    at safeAsync (/Users/thushalintervest/Desktop/Projects/jestTesimg/node_modules/detox/src/utils/safeAsync.js:4:13)\n' +
+          '    at /Users/thushalintervest/Desktop/Projects/jestTesimg/node_modules/detox/src/devices/DeviceRegistry.js:73:24\n' +
+          '    at ExclusiveLockfile.exclusively (/Users/thushalintervest/Desktop/Projects/jestTesimg/node_modules/detox/src/utils/ExclusiveLockfile.js:41:15)\n' +
+          '    at SimulatorAllocDriver.allocate (/Users/thushalintervest/Desktop/Projects/jestTesimg/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:29:18)'
+      },
+      isPermanentFailure: false
+    }
+  ]
+}
+23:59:45.682 detox[5246] i broadcasting event to all known sockets listening to  /tmp/detox.primary-5246  :   sessionStateUpdate {
+  testResults: [
+    {
+      success: false,
+      testFilePath: '/Users/thushalintervest/Desktop/Projects/jestTesimg/e2e/newUI.test.js',
+      testExecError: {
+        name: 'DetoxRuntimeError',
+        message: 'Failed to find a device by type = "iPhone Xʀ" and by OS = "iOS 16.1"\n' +
+          '\n' +
+          `HINT: Run 'applesimutils --list' to list your supported devices. It is advised only to specify a device type, e.g., "iPhone Xʀ" and avoid explicit search by OS version.`,
+        stack: 'DetoxRuntimeError: Failed to find a device by type = "iPhone Xʀ" and by OS = "iOS 16.1"\n' +
+          '\n' +
+          `HINT: Run 'applesimutils --list' to list your supported devices. It is advised only to specify a device type, e.g., "iPhone Xʀ" and avoid explicit search by OS version.\n` +
+          '    at SimulatorAllocDriver._queryDevices (/Users/thushalintervest/Desktop/Projects/jestTesimg/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:110:13)\n' +
+          '    at SimulatorAllocDriver._groupDevicesByStatus (/Users/thushalintervest/Desktop/Projects/jestTesimg/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:89:27)\n' +
+          '    at SimulatorAllocDriver._findOrCreateDevice (/Users/thushalintervest/Desktop/Projects/jestTesimg/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:76:29)\n' +
+          '    at /Users/thushalintervest/Desktop/Projects/jestTesimg/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:30:14\n' +
+          '    at safeAsync (/Users/thushalintervest/Desktop/Projects/jestTesimg/node_modules/detox/src/utils/safeAsync.js:4:13)\n' +
+          '    at /Users/thushalintervest/Desktop/Projects/jestTesimg/node_modules/detox/src/devices/DeviceRegistry.js:73:24\n' +
+          '    at ExclusiveLockfile.exclusively (/Users/thushalintervest/Desktop/Projects/jestTesimg/node_modules/detox/src/utils/ExclusiveLockfile.js:41:15)\n' +
+          '    at SimulatorAllocDriver.allocate (/Users/thushalintervest/Desktop/Projects/jestTesimg/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:29:18)'
+      },
+      isPermanentFailure: false
+    }
+  ]
+}
+23:59:45.682 detox[5247] i ## received events ##
+23:59:45.682 detox[5247] i detected event reportTestResultsDone {
+  testResults: [
+    {
+      success: false,
+      testFilePath: '/Users/thushalintervest/Desktop/Projects/jestTesimg/e2e/newUI.test.js',
+      testExecError: {
+        name: 'DetoxRuntimeError',
+        message: 'Failed to find a device by type = "iPhone Xʀ" and by OS = "iOS 16.1"\n' +
+          '\n' +
+          `HINT: Run 'applesimutils --list' to list your supported devices. It is advised only to specify a device type, e.g., "iPhone Xʀ" and avoid explicit search by OS version.`,
+        stack: 'DetoxRuntimeError: Failed to find a device by type = "iPhone Xʀ" and by OS = "iOS 16.1"\n' +
+          '\n' +
+          `HINT: Run 'applesimutils --list' to list your supported devices. It is advised only to specify a device type, e.g., "iPhone Xʀ" and avoid explicit search by OS version.\n` +
+          '    at SimulatorAllocDriver._queryDevices (/Users/thushalintervest/Desktop/Projects/jestTesimg/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:110:13)\n' +
+          '    at SimulatorAllocDriver._groupDevicesByStatus (/Users/thushalintervest/Desktop/Projects/jestTesimg/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:89:27)\n' +
+          '    at SimulatorAllocDriver._findOrCreateDevice (/Users/thushalintervest/Desktop/Projects/jestTesimg/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:76:29)\n' +
+          '    at /Users/thushalintervest/Desktop/Projects/jestTesimg/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:30:14\n' +
+          '    at safeAsync (/Users/thushalintervest/Desktop/Projects/jestTesimg/node_modules/detox/src/utils/safeAsync.js:4:13)\n' +
+          '    at /Users/thushalintervest/Desktop/Projects/jestTesimg/node_modules/detox/src/devices/DeviceRegistry.js:73:24\n' +
+          '    at ExclusiveLockfile.exclusively (/Users/thushalintervest/Desktop/Projects/jestTesimg/node_modules/detox/src/utils/ExclusiveLockfile.js:41:15)\n' +
+          '    at SimulatorAllocDriver.allocate (/Users/thushalintervest/Desktop/Projects/jestTesimg/node_modules/detox/src/devices/allocation/drivers/ios/SimulatorAllocDriver.js:29:18)'
+      },
+      isPermanentFailure: false
+    }
+  ]
+}
+23:59:45.683 detox[5246] i socket disconnected secondary-5247
+23:59:45.683 detox[5247] i connection closed primary-5246 /tmp/detox.primary-5246 0 tries remaining of 0
+23:59:45.683 detox[5247] i secondary-5247 exceeded connection rety amount of  or stopRetrying flag set.
+23:59:45.789 detox[5246] E Command failed with exit code = 1:
+jest --config e2e/jest.config.js
+23:59:45.790 detox[5246] i Detox server has been closed gracefully
+23:59:45.790 detox[5246] E node_modules/.bin/detox test -c ios.sim.release --record-logs all

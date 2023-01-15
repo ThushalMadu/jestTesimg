@@ -55,13 +55,21 @@ module.exports = {
     }
   },
   configurations: {
-    'ios.sim.debug': {
-      device: 'simulator',
-      app: 'ios.debug'
-    },
     'ios.sim.release': {
-      device: 'simulator',
-      app: 'ios.release'
+      binaryPath: "ios/build/Build/Products/Release-iphonesimulator/jestTesimg.app",
+      build: "export RCT_NO_LAUNCH_PACKAGER=true && xcodebuild ONLY_ACTIVE_ARCH=YES -workspace ios/jestTesimg.xcworkspace -scheme a -configuration Release -sdk iphonesimulator -derivedDataPath ios/build",
+      type: "ios.simulator",
+      device: {
+        type: "iPhone 12",
+      },
+    },
+    'ios.sim.debug': {
+      binaryPath: "ios/build/Build/Products/Debug-iphonesimulator/jestTesimg.app",
+      build: "xcodebuild -workspace ios/jestTesimg.xcworkspace -scheme a -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build",
+      type: "ios.simulator",
+      device: {
+        type: "iPhone 12",
+      },
     },
     'android.att.debug': {
       device: 'attached',
