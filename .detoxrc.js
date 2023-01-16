@@ -11,14 +11,14 @@ module.exports = {
   },
   apps: {
     "ios.release": {
-      "type": "ios.app",
-      "binaryPath": "ios/build/Build/Products/Release-iphonesimulator/jestTesimg.app",
-      "build": "export RCT_NO_LAUNCH_PACKAGER=true && xcodebuild -workspace ios/jestTesimg.xcworkspace -UseNewBuildSystem=NO -scheme jestTesimg -configuration Release -sdk iphonesimulator -derivedDataPath ios/build -quiet"
+      type: "ios.app",
+      binaryPath: "ios/build/Build/Products/Release-iphonesimulator/jestTesimg.app",
+      build: "export RCT_NO_LAUNCH_PACKAGER=true && xcodebuild -workspace ios/jestTesimg.xcworkspace -UseNewBuildSystem=NO -scheme jestTesimg -configuration Release -sdk iphonesimulator -derivedDataPath ios/build -quiet"
     },
     "ios.debug": {
-      "type": "ios.app",
-      "binaryPath": "ios/build/Build/Products/Debug-iphonesimulator/jestTesimg.app",
-      "build": "xcodebuild -workspace ios/jestTesimg.xcworkspace -UseNewBuildSystem=NO -scheme jestTesimg -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build"
+      type: "ios.app",
+      binaryPath: "ios/build/Build/Products/Debug-iphonesimulator/jestTesimg.app",
+      build: "xcodebuild -workspace ios/jestTesimg.xcworkspace -UseNewBuildSystem=NO -scheme jestTesimg -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build"
     },
     'android.debug': {
       type: 'android.apk',
@@ -56,13 +56,29 @@ module.exports = {
   },
   configurations: {
     "ios.sim.release": {
-      "device": "simulator",
-      "app": "ios.release"
+      binaryPath: "ios/build/Build/Products/Release-iphonesimulator/jestTesimg.app",
+      build: "export RCT_NO_LAUNCH_PACKAGER=true && xcodebuild ONLY_ACTIVE_ARCH=YES -workspace ios/jestTesimg.xcworkspace -scheme jestTesimg -configuration Release -sdk iphonesimulator -derivedDataPath ios/build",
+      type: "ios.simulator",
+      device: {
+        type: "iPhone 11 Pro",
+      },
     },
     "ios.sim.debug": {
-      "device": "simulator",
-      "app": "ios.debug"
+      binaryPath: "ios/build/Build/Products/Debug-iphonesimulator/jestTesimg.app",
+      build: "xcodebuild -workspace ios/jestTesimg.xcworkspace -scheme jestTesimg -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build",
+      type: "ios.simulator",
+      device: {
+        type: "iPhone 11 Pro",
+      },
     },
+    // "ios.sim.release": {
+    //   device: "simulator",
+    //   app: "ios.release"
+    // },
+    // "ios.sim.debug": {
+    //   device: "simulator",
+    //   app: "ios.debug"
+    // },
     'android.att.debug': {
       device: 'attached',
       app: 'android.debug'
@@ -81,3 +97,13 @@ module.exports = {
     }
   }
 };
+
+
+
+
+
+
+
+
+
+
