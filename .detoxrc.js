@@ -58,7 +58,6 @@ module.exports = {
     "ios.sim.release": {
       binaryPath: "ios/build/Build/Products/Release-iphonesimulator/jestTesimg.app",
       build: "export RCT_NO_LAUNCH_PACKAGER=true && xcodebuild ONLY_ACTIVE_ARCH=YES -workspace ios/jestTesimg.xcworkspace -scheme jestTesimg -configuration Release -sdk iphonesimulator -derivedDataPath ios/build",
-      type: "ios.simulator",
       device: {
         type: "iPhone 11 Pro",
       },
@@ -66,7 +65,6 @@ module.exports = {
     "ios.sim.debug": {
       binaryPath: "ios/build/Build/Products/Debug-iphonesimulator/jestTesimg.app",
       build: "xcodebuild -workspace ios/jestTesimg.xcworkspace -scheme jestTesimg -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build",
-      type: "ios.simulator",
       device: {
         type: "iPhone 11 Pro",
       },
