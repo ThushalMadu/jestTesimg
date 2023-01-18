@@ -220,7 +220,6 @@ jobs:
       - attach_workspace:
           at: .
       - checkout
-      - node-version
       - npm-dependencies
       - pods-dependencies
       - react-native-dependencies
