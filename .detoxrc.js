@@ -38,7 +38,7 @@ module.exports = {
     simulator: {
       type: 'ios.simulator',
       device: {
-        type: 'iPhone 12'
+        type: 'iPhone 14'
       }
     },
     attached: {
@@ -56,27 +56,13 @@ module.exports = {
   },
   configurations: {
     "ios.sim.release": {
-      binaryPath: "ios/build/Build/Products/Release-iphonesimulator/jestTesimg.app",
-      build: "export RCT_NO_LAUNCH_PACKAGER=true && xcodebuild ONLY_ACTIVE_ARCH=YES -workspace ios/jestTesimg.xcworkspace -scheme jestTesimg -configuration Release -sdk iphonesimulator -derivedDataPath ios/build",
-      device: {
-        type: "iPhone 11 Pro",
-      },
+      device: "simulator",
+      app: "ios.release"
     },
     "ios.sim.debug": {
-      binaryPath: "ios/build/Build/Products/Debug-iphonesimulator/jestTesimg.app",
-      build: "xcodebuild -workspace ios/jestTesimg.xcworkspace -scheme jestTesimg -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build",
-      device: {
-        type: "iPhone 11 Pro",
-      },
+      device: "simulator",
+      app: "ios.debug"
     },
-    // "ios.sim.release": {
-    //   device: "simulator",
-    //   app: "ios.release"
-    // },
-    // "ios.sim.debug": {
-    //   device: "simulator",
-    //   app: "ios.debug"
-    // },
     'android.att.debug': {
       device: 'attached',
       app: 'android.debug'
