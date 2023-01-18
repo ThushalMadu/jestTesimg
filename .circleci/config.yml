@@ -79,6 +79,7 @@ commands:
 
   android-sdk-dependencies:
     description: "Install and set android SDK"
+  steps:
   - run:
       name: Install Android Emulator
       shell: /bin/bash -e
@@ -220,6 +221,7 @@ jobs:
       - attach_workspace:
           at: .
       - checkout
+      - node-version
       - npm-dependencies
       - pods-dependencies
       - react-native-dependencies
