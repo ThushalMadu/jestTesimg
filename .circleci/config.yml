@@ -124,31 +124,6 @@ steps:
         "system-images;<<parameters.platform_version>>;default;x86_64" --tag
         default --device pixel
 
-  - run:
-      name: Start Android Emulator (background)
-      command: |
-        $ANDROID_HOME/emulator/emulator @<<parameters.device_name>> -version
-        $ANDROID_HOME/emulator/emulator @<<parameters.device_name>> -cores 1 -gpu auto -accel on -memory 1024 -no-audio -no-snapshot -no-boot-anim -no-window -logcat *:W | grep -i 'ReactNative\|<<parameters.logcat_grep>>'
-      background: true
-
-  - run:
-      name: Wait for AVD to be ready
-      no_output_timeout: "5m"
-      command: |
-        export BOOT=""
-        echo "Waiting for AVD to finish booting"
-        export PATH=$(dirname $(dirname $(command -v android)))/platform-tools:$PATH
-        until [[ "$BOOT" =~ "1" ]]; do
-          sleep 5
-          export BOOT=$(adb -e shell getprop sys.boot_completed 2>&1)
-        done
-        sleep 15
-        adb shell settings put global window_animation_scale 0
-        adb shell settings put global transition_animation_scale 0
-        adb shell settings put global animator_duration_scale 0
-        echo "Android Virtual Device is now ready."
-
-
   react-native-dependencies:
     description: "Install RN dependencies"
     steps:
